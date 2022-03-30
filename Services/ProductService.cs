@@ -34,11 +34,27 @@ namespace Services
         public List<Product> GetAll()
         {
             return _context.Products.Include(x => x.Category)
+                .OrderBy(x=>x.Id)
                 .ToList();
+        }
+
+        public List<Product> GetAllPizza()
+        {
+            return _context.Products.Include(x => x.Category).Where(x => x.CategoryId == 1).ToList();
+        
+                
+               
         }
         public Product GetById(int? id)
         {
             return _context.Products.Include(x => x.Category).FirstOrDefault(c => c.Id == id);
+        }
+           public async Task<List<Product>> GetByIds(IEnumerable<int> ids)
+        {
+            return await _context.Products
+         
+               .Where(c => ids.Contains(c.Id))
+               .ToListAsync();
         }
 
         public void Delete(int? id)

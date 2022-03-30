@@ -33,7 +33,7 @@ namespace Services
         }
         public List<MainSlider> GetAll()
         {
-            return _context.Sliders.ToList();
+            return _context.Sliders.OrderBy(x=>x.Id).ToList();
         }
         public MainSlider GetById(int? id)
         {

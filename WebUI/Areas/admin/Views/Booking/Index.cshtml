@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Entitites.Booking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+             Id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Person)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReguestTime)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var count = 0;
+        }
+@foreach (var item in Model) {
+            count++;
+            <tr>
+              <td>
+             @count
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReguestTime)
+            </td>
+        
+                <td class="d-flex align-items-center">
+          
+                    @*<a asp-action = "Delete" asp-route-id ="@item.Id">Delete</a>*@
+                    <form id="courseRemove" method="post" asp-action="Delete">
+                        <input type="hidden" value=@item.Id name="Id" />
+                        <button class="btn btn-danger btn-delete"><i class="fa-solid fa-trash-can"></i></button>
+                    </form> &nbsp; &nbsp;
+
+                    <a class="btn btn-info" href="/Admin/Booking/Details/@item.Id">Read Email</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

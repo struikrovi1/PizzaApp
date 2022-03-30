@@ -32,7 +32,7 @@ namespace Services
         }
         public List<Category> GetAll()
         {
-            return _context.Categories.ToList();
+            return _context.Categories.OrderBy(x=>x.Id).ToList();
         }
         public Category GetById(int? id)
         {

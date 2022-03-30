@@ -1,0 +1,224 @@
+﻿@using Web.ViewModels
+
+@model CartVM
+<div class="header-bg header-bg-page">
+    <div class="header-padding position-relative">
+        <div class="header-page-shape">
+            <div class="header-page-shape-item">
+                <img src="assets/images/header-shape-1.png" alt="shape">
+            </div>
+            <div class="header-page-shape-item">
+                <img src="assets/images/header-shape-2.png" alt="shape">
+            </div>
+            <div class="header-page-shape-item">
+                <img src="assets/images/header-shape-3.png" alt="shape">
+            </div>
+            <div class="header-page-shape-item">
+                <img src="assets/images/header-shape-1.png" alt="shape">
+            </div>
+            <div class="header-page-shape-item">
+            </div>
+            <div class="header-page-shape-item">
+                <img src="assets/images/header-shape-1.png" alt="shape">
+            </div>
+            <div class="header-page-shape-item">
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-page-content">
+                <h1>Cart</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="shops-grid.html">Shops</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="cart-section pt-100 pb-70 bg-black">
+    <div class="container">
+        <div class="cart-table cart-table-dark">
+            @if (Model != null && Model.CartItems != null)
+            {
+             
+                     <form class="cartContent" action="#">
+                      
+                                <table id="cartTable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Product</th>
+
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                decimal totalPrice = 0;
+                            }
+                            @foreach (var item in Model.CartItems)
+                            {
+                                var quantity = Model.ProIds.Where(c => c == item.Id).Count();
+                                totalPrice += item.Price * quantity;
+                                <tr>
+                                    <td pro-id="@item.Id" class="cancel product-remove"><a href="#"><i class='flaticon-cancel'></i></a></td>
+                                    <td>
+                                        <div class="product-table-info">
+                                            <div class="product-table-thumb">
+                                                <img src="@item.PhotoUrl" alt="product">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-product-name">@item.Title</td>
+
+                                    <td>$@item.Price</td>
+                                    <td>
+                                        <div class="cart-quantity">
+                                            <div class="qu-btn dec" pro-id=@item.Id>-</div>
+                                            <input type="text" class="qu-input" value="@quantity">
+                                            <div class="qu-btn inc" pro-id=@item.Id>+</div>
+                                        </div>
+                                    </td>
+                                    <td class="td-total-price">$@(item.Price*quantity)</td>
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                    <div class="row justify-content-between align-items-center mt-30">
+                        <div class="col-sm-12 col-md-7 col-lg-5">
+                            <div class="cart-coupon cart-info-item">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Enter Coupon Code">
+                                        <button class="btn">Apply Coupon</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <div class="cart-update cart-info-item">
+                               
+                                     <a href="#" class="btn full-width" id = " update-btn">
+                                    Update Cart
+                                </a>
+                               
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
+                            <div class="cart-details mt-20">
+                                <h3 class="cart-details-title color-white">Cart Totals</h3>
+                                <div class="cart-total-box">
+                                 @*   <div class="cart-total-item">
+                                        <h4>Sub Total</h4>
+                                        <p>$  </p>
+                                    </div>
+                                    <div class="cart-total-item">
+                                        <h4>Shipping</h4>
+                                        <div class="cart-total-checkarea">
+                                            <div class="cart-checkarea-item">
+                                                <div class="cart-check-box">
+                                                    <input type="radio" name="ship" id="cart1">
+                                                    <label for="cart1">Flat Rate</label>
+                                                </div>
+                                            </div>
+                                            <div class="cart-checkarea-item">
+                                                <div class="cart-check-box">
+                                                    <input type="radio" name="ship" id="cart2">
+                                                    <label for="cart2">Express Delivery</label>
+                                                </div>
+                                                <p>$ 15</p>
+                                            </div>
+                                            <div class="cart-checkarea-item">
+                                                <div class="cart-check-box">
+                                                    <input type="radio" name="ship" id="cart3">
+                                                    <label for="cart3">In-Stock Pick up</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                    <div class="cart-total-item cart-total-bold">
+                                        <h4 class="color-white">Total</h4>
+                                        <p>$ @totalPrice</p>
+                                    </div>
+                                </div>
+                                <a href="checkout.html" class="btn">Proceed To Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                 
+                </form>
+              
+               
+            }
+            else
+            {
+                <p class="alert alert-danger">"Cart is empty!"</p>
+            }
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</section>
+
+
+
+
+<section class="subscribe-section mural-bg pt-100 pb-70 bg-main">
+    <div class="container">
+        <div class="subscribe-grid">
+            <div class="subscribe-item">
+                <div class="section-title text-center text-lg-start m-0">
+                    <h2 class="color-white">Subscribe Our Newsletter</h2>
+                    <p>Don't miss any upcoming event & Get your coupon via email.</p>
+                </div>
+            </div>
+            <div class="subscribe-item">
+                <div class="subscribe-form">
+                    <form class="newsletter-form newsletter-form-white" data-bs-toggle="validator">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="email" id="emails" class="form-control" placeholder="Enter Email Address*" name="EMAIL" required autocomplete="off">
+                            </div>
+                            <button class="btn btn-yellow" type="submit">Subscribe <i class="flaticon-right-arrow-sketch-1"></i></button>
+                        </div>
+                        <div id="validator-newsletter" class="form-result color-white"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ 
+
+
+<script>
+    function reload_interval(time){
+setTimeout(function(){
+		location.reload();
+	}, time);
+  
+</script>
+

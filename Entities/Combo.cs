@@ -11,9 +11,10 @@ namespace Entitites
         public string PhotoUrl { get; set; }
 
         public string Title { get; set; }
-        public string? Price { get; set; }
+        public decimal Price { get; set; }
 
-       
+        
+
 
     }
 }

@@ -18,7 +18,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<SliderService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<CategoryService>();
-
+builder.Services.AddScoped<ComboService>();
+builder.Services.AddScoped<BlogService>();
+builder.Services.AddScoped<ChefService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<BookingService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

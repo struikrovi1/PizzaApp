@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JVO236x+YF3ZHsNY1zoh1NZbDSPvq3ETdghP3HJoiX4=",
+  "Hash": "VOqKoi9EwvC8gDiq1G0OvWUnW3RoL8QLQOsx4HFLGFE=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -41429,12 +41429,12 @@
       "OriginalItemSpec": "wwwroot\\frontadmin\\plugins\\uplot\\uPlot.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\Projects\\C#\\FafoApp\\WebUI\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\user\\Desktop\\Projects\\C#\\FafoApp\\WebUI\\wwwroot\\js\\cart.js",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\Projects\\C#\\FafoApp\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/cart.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -41443,7 +41443,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\cart.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Projects\\C#\\FafoApp\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -5,65 +5,65 @@
 
 @model HomeVM
 
-fontheader-bg-two header-bg-two-owl">
-<div class="container-fluid p-0">
-    <div class="header-container position-relative p-tb-100">
-        <div class="header-page-shape">
-            <div class="header-page-shape-item wow animate__rollIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/header-shape-7.png" alt="shape">
+<div class="fontheader-bg-two header-bg-two-owl">
+    <div class="container-fluid p-0">
+        <div class="header-container position-relative p-tb-100">
+            <div class="header-page-shape">
+                <div class="header-page-shape-item wow animate__rollIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <img src="assets/images/header-shape-7.png" alt="shape">
+                </div>
+                <div class="header-page-shape-item wow animate__slideInRight" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                    <img src="assets/images/header-shape-3.png" alt="shape">
+                </div>
+                <div class="header-page-shape-item wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <img src="assets/images/header-shape-1.png" alt="shape">
+                </div>
+                <div class="header-page-shape-item wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <img src="assets/images/header-shape-6.png" alt="shape">
+                </div>
             </div>
-            <div class="header-page-shape-item wow animate__slideInRight" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                <img src="assets/images/header-shape-3.png" alt="shape">
-            </div>
-            <div class="header-page-shape-item wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/header-shape-1.png" alt="shape">
-            </div>
-            <div class="header-page-shape-item wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/header-shape-6.png" alt="shape">
-            </div>
-        </div>
-        <div class="header-carousel-two owl-carousel owl-theme">
-            @foreach (var item in Model.Sliders)
-            {
-                <div class="item">
-                    <div class="row align-items-center">
-                        <div class="col-sm-12 col-md-12 col-lg-4 pb-30 order-2 order-lg-1">
-                            <div class="header-carousel-image mx-auto me-lg-0 header-2-image-sm">
-                                <img style="min-width: 600px; min-height: 700px;" src="@item.PhotoUrl" alt="header">
+            <div class="header-carousel-two owl-carousel owl-theme">
+                @foreach (var item in Model.Sliders)
+                {
+                    <div class="item">
+                        <div class="row align-items-center">
+                            <div class="col-sm-12 col-md-12 col-lg-4 pb-30 order-2 order-lg-1">
+                                <div class="header-carousel-image mx-auto me-lg-0 header-2-image-sm">
+                                    <img style="min-width: 500px;" src="@item.PhotoUrl" alt="header">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-8 pb-30 order-1 order-lg-2">
-                            <div class="header-carousel-text text-center text-lg-start max-885 ms-lg-0 mx-auto">
-                                <h1>@item.SliderTitle</h1>
-                                <div class="header-2-caption-shape">
-                                    <div class="header-content-subtitle">
-                                        <p class="header-subtitle-name">
-                                            @item.MenuItem1 <span>+</span> @item.MenuItem2 <span>+</span> @item.MenuItem3 <span>=</span>
-                                        </p>
-                                        <p class="header-subtitle-price">
-                                            Only
-                                            <span><small>$</small>@item.MenuPrice</span>
-                                        </p>
-                                        <div class="header-content-cart">
-                                            <div class="header-cart-button">
-                                                <a href="#"><i class="icofont-plus"></i></a>
+                            <div class="col-sm-12 col-md-12 col-lg-8 pb-30 order-1 order-lg-2">
+                                <div class="header-carousel-text text-center text-lg-start max-885 ms-lg-0 mx-auto">
+                                    <h1>@item.SliderTitle</h1>
+                                    <div class="header-2-caption-shape">
+                                        <div class="header-content-subtitle">
+                                            <p class="header-subtitle-name">
+                                                @item.MenuItem1 <span>+</span> @item.MenuItem2 <span>+</span> @item.MenuItem3 <span>=</span>
+                                            </p>
+                                            <p class="header-subtitle-price">
+                                                Only
+                                                <span><small>$</small>@item.MenuPrice</span>
+                                            </p>
+                                            <div class="header-content-cart">
+                                                <div class="header-cart-button">
+                                                    <a href="#"><i class="icofont-plus"></i></a>
+                                                </div>
+                                                <div class="header-cart-text">Add To Cart</div>
                                             </div>
-                                            <div class="header-cart-text">Add To Cart</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
 
 
 
 
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 
@@ -112,94 +112,42 @@ fontheader-bg-two header-bg-two-owl">
             <h2>Our Best Combos To Choose</h2>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo1
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-1.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>1 Bugers, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$10.91</p>
+            @{
+                var combo = 1;
+            }
+            @foreach (var item in Model.Combos)
+            {
+                <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <div class="combo-box-two">
+                        <div class="combo-two-pos-title">
+                            Combo@(combo)
+                        </div>
+                        <div class="combo-image-two">
+                            <img src="@item.PhotoUrl" alt="combo">
+                        </div>
+                        <div class="combo-two-text">
+                            <h3>@item.Title</h3>
+                            <div class="d-flex">
+                                <a pro-id="@item.Id" class="btn btn-border btn-small cart-btn">
+                                    Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+                                </a>
+                                <a href="/product/details/@item.Id" class="btn btn-border btn-small">
+                                    Go Details
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="combo-offer-shape combo-offer-shape-red">
+                            <div class="combo-shape-inner">
+                                <small>Only At</small>
+                                <p>$@item.Price</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo2
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-2.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Hotdogs, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-yellow">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$8.65</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo3
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-3.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Burgers, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$12.45</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo4
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-4.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Pizzas, 1 Sauce, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$9.15</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                combo++;
+            }
+
         </div>
     </div>
 </section>
@@ -271,289 +219,34 @@ fontheader-bg-two header-bg-two-owl">
 
             </div>
 
+
             <div class="menu-main-details-for">
-
-                @{
-                    var count = 0;
-                    var prod = 0;
-                }
-
-                @foreach (var item in Model.Products)
+                @foreach (var category in Model.Categories)
                 {
-                    <div class="menu-main-details-item" data-slick-index = "@(count++) >
-                        <div class="menu-details-carousel"> 
-                           
+                    <div class="menu-main-details-item">
+                        <div class="menu-details-carousel">
 
-                                @foreach (var pro in Model.Products)
-                                {
-                                     <div class="menu-details-carousel-item" data-slick-index = "@(prod++)">
-                                      <h3>@pro.Name</h3>
-                                <p>@pro.Summary</p>
-                                <h4 class="menu-price">$@pro.Price</h4>
-                                <a href="#" class="btn btn-yellow">
-                                    Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                                </a>
-                                <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                    <img style="width: 100px;" src="@pro.PhotoUrl" alt="menu">
+                            @foreach (var item in Model.Products.Where(x => x.CategoryId == category.Id))
+                            {
+                                <div class="menu-details-carousel-item">
+                                    <h3>@item.Name</h3>
+                                    <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+                                    <h4 class="menu-price">$12.99</h4>
+                                    <a href="#" class="btn btn-yellow">
+                                        Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
+                                    </a>
+                                    <div class="menu-details-carousel-image menu-details-carousel-image-two">
+                                        <img src="@item.PhotoUrl" alt="menu">
+                                    </div>
                                 </div>
-                                   </div>
-
-                                }
-
-
-                              
-                         </div>
-                      
-               
+                            }
+                        </div>
+                    </div>
                 }
 
-
-
-
-                <div class="menu-main-details-item">
-                    <div class="menu-details-carousel">
-                     
-                    </div>
-                </div>
-
-
-                <div class="menu-main-details-item">
-                    <div class="menu-details-carousel">
-                        <div class="menu-details-carousel-item">
-                            <h3>Italiano Sandwitch</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$12.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/sandwitch-slider-1.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>American Sandwitch</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$10.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/sandwitch-slider-2.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Jam Sandwitch</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/sandwitch-slider-3.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Avocado Sandwitch</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/sandwitch-slider-4.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Egg Sandwitch</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/sandwitch-slider-5.png" alt="menu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-main-details-item">
-                    <div class="menu-details-carousel">
-                        <div class="menu-details-carousel-item">
-                            <h3>Cherry Venilla</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$12.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/shake-slider-1.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Strawberry Shake</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$10.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/shake-slider-2.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Fruty Pebble</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/shake-slider-3.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Oreo Shake</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/shake-slider-4.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Banana Shake</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/shake-slider-5.png" alt="menu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-main-details-item">
-                    <div class="menu-details-carousel">
-                        <div class="menu-details-carousel-item">
-                            <h3>Creamy Cream</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$12.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/icecream-slider-1.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Regular Chocolate</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$10.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/icecream-slider-2.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>French Icecream</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/icecream-slider-3.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Perfect Pear</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/icecream-slider-4.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Light Icecream</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/icecream-slider-5.png" alt="menu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-main-details-item">
-                    <div class="menu-details-carousel">
-                        <div class="menu-details-carousel-item">
-                            <h3>Decadent</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$12.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/dessert-slider-1.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Frozen</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$10.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/dessert-slider-2.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Luscious</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/dessert-slider-3.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Creamy</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/dessert-slider-4.png" alt="menu">
-                            </div>
-                        </div>
-                        <div class="menu-details-carousel-item">
-                            <h3>Zesty</h3>
-                            <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-                            <h4 class="menu-price">$20.99</h4>
-                            <a href="#" class="btn btn-yellow">
-                                Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-                            </a>
-                            <div class="menu-details-carousel-image menu-details-carousel-image-two">
-                                <img src="assets/images/dessert-slider-5.png" alt="menu">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+
         </div>
     </div>
 </section>
@@ -568,125 +261,93 @@ fontheader-bg-two header-bg-two-owl">
                     <a href="shops-grid.html" class="btn full-height ms-auto m-md-0">See All Products</a>
                 </div>
                 <div class="receipe-grid">
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-1.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Pepperoni Pizza</a></h3>
-                                    <h4>$4.59<del>$7.59</del></h4>
+                    @foreach (var item in Model.Pizza)
+                    {
+                        <div class="receipe-item pb-30">
+                            <div class="receipe-item-inner">
+                                <div class="receipe-image">
+                                    <img src="@item.PhotoUrl" alt="receipe">
                                 </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-2.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Beefka Pizza</a></h3>
-                                    <h4>$5.12<del>$6.59</del></h4>
-                                </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
+                                <div class="receipe-content">
+                                    <div class="receipe-info">
+                                        <h3><a href="/product/details/@item.Id">@item.Name</a></h3>
+                                        <h4>
+                                            @if (item.Discount != null && item.Discount > 0)
+                                            {
+                                                <span>$@item.Discount</span>
+                                                <del>$@item.Price</del>
+
+                                            }
+                                            else
+                                            {
+                                                <span>&nbsp; $@item.Price</span>
+                                            }
+                                        </h4>
+                                    </div>
+                                    <div class="receipe-cart">
+                                        <a pro-id="@item.Id" href="#">
+                                            <i class="flaticon-supermarket-basket"></i>
+                                            <i class="flaticon-supermarket-basket"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-3.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Avocado Pizza</a></h3>
-                                    <h4>$5.12<del>$6.59</del></h4>
-                                </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-4.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Vegana Pizza</a></h3>
-                                    <h4>$7.45<del>$8.12</del></h4>
-                                </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-5.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Ball Pizza</a></h3>
-                                    <h4>$9.45<del>$10.12</del></h4>
-                                </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="receipe-item pb-30">
-                        <div class="receipe-item-inner">
-                            <div class="receipe-image">
-                                <img src="assets/images/pizza-receipe-6.png" alt="receipe">
-                            </div>
-                            <div class="receipe-content">
-                                <div class="receipe-info">
-                                    <h3><a href="shop-details.html">Green Pizza</a></h3>
-                                    <h4>$8.45<del>$12.01</del></h4>
-                                </div>
-                                <div class="receipe-cart">
-                                    <a href="#">
-                                        <i class="flaticon-supermarket-basket"></i>
-                                        <i class="flaticon-supermarket-basket"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
+
+
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 offset-md-4 offset-lg-0 pb-30">
                 <div class="food-ad">
-                    <img src="assets/images/poster.png" alt="ad">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12">
+                            <h4>@Model.Order.OrderTitle1</h4>
+                            <h5>@Model.Order.OrderTitle2</h5>
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12">
+
+
+                            <div class="bobo">
+
+                                <div class="static-pl">
+                                    <h6 class="ord-1">Order Now, Ring on the phone!</h6>
+
+                                </div>
+
+                                <div style="margin-left: 160px;" class="social-tems">
+                                    <ul class="social-list social-list-white">
+                                        <li><a href="#"><i style="font-size: 30px;" class="flaticon-facebook"></i></a></li>
+                                        <li><a href="#"><i style="font-size: 30px;" class="flaticon-twitter"></i></a></li>
+                                        <li><a href="#"><i style="font-size: 30px;" class="flaticon-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="photo-add-2">
+
+                                    <h6>@Model.Order.Phone</h6>
+                                </div>
+
+                                <div class="img-fluid toto">
+                                    <img width="100%" src="@Model.Order.PhotoUrl" />
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -701,222 +362,30 @@ fontheader-bg-two header-bg-two-owl">
             <h2>Who Made This Delicious Food</h2>
         </div>
         <div class="team-carousel owl-carousel owl-theme">
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-1.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
+
+            @foreach (var item in Model.Chefs)
+            {
+                <div class="item">
+                    <div class="team-item">
+                        <div class="team-thumb">
+                            <img style="border-radius: 100%; width: 300px; height:280px;" src="@item.PhotoUrl" alt="client">
+                            <div class="team-overlay">
+                                <ul class="social-list social-list-white">
+                                    <li><a href="#"><i class="flaticon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="carousel-name"><a href="team-details.html">@item.Name</a></h3>
+                            <h4 class="carousel-designation">@item.Position</h4>
                         </div>
                     </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Anthony Rasel</a></h3>
-                        <h4 class="carousel-designation">Dessert Artist</h4>
-                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-2.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Julia Margareta</a></h3>
-                        <h4 class="carousel-designation">Snacks Artist</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-3.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Victor James</a></h3>
-                        <h4 class="carousel-designation">Senior Chef</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-4.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Angela Carter</a></h3>
-                        <h4 class="carousel-designation">Junior Chef</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-1.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Anthony Rasel</a></h3>
-                        <h4 class="carousel-designation">Dessert Artist</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-2.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Julia Margareta</a></h3>
-                        <h4 class="carousel-designation">Snacks Artist</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-3.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Victor James</a></h3>
-                        <h4 class="carousel-designation">Senior Chef</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-4.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Angela Carter</a></h3>
-                        <h4 class="carousel-designation">Junior Chef</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-1.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Anthony Rasel</a></h3>
-                        <h4 class="carousel-designation">Dessert Artist</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-2.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Julia Margareta</a></h3>
-                        <h4 class="carousel-designation">Snacks Artist</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-3.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Victor James</a></h3>
-                        <h4 class="carousel-designation">Senior Chef</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="team-item">
-                    <div class="team-thumb">
-                        <img src="assets/images/team-4.png" alt="client">
-                        <div class="team-overlay">
-                            <ul class="social-list social-list-white">
-                                <li><a href="#"><i class="flaticon-facebook"></i></a></li>
-                                <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="carousel-name"><a href="team-details.html">Angela Carter</a></h3>
-                        <h4 class="carousel-designation">Junior Chef</h4>
-                    </div>
-                </div>
-            </div>
+            }
+
+
         </div>
     </div>
 </section>
@@ -971,11 +440,14 @@ fontheader-bg-two header-bg-two-owl">
             <h2 class="color-white">Make A Reservation</h2>
         </div>
         <div class="reservation-form-area">
-            <form>
+            <form method="post">
                 <div class="reservation-form reservation-form-white">
+
+
+
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" placeholder="1 Person" class="form-control">
+                            <input type="text" placeholder="1 Person" name="person" class="form-control">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <i class="flaticon-add-user"></i>
@@ -983,9 +455,15 @@ fontheader-bg-two header-bg-two-owl">
                             </div>
                         </div>
                     </div>
+
+
+
+
+
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" placeholder="Select Date" class="form-control" id="datepicker">
+                            <input type="datetime-local" 
+                                  name="reguesttime" class="form-control">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <i class="flaticon-calendar-1"></i>
@@ -993,18 +471,11 @@ fontheader-bg-two header-bg-two-owl">
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" name="startTime" class="form-control timepicker" placeholder="Select Time" />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <i class="flaticon-clock"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+
                 </div>
-                <button class="btn">Book A Table Now</button>
+                <button value="Create" type="submit" class="btn">Book A Table Now</button>
             </form>
         </div>
     </div>
@@ -1056,57 +527,27 @@ fontheader-bg-two header-bg-two-owl">
             <h2>Read Our Latest Food News</h2>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+            @foreach (var item in Model.Blogs)
+            {   <div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
                 <div class="blog-card blog-card-two">
                     <div class="blog-card-thumb">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog-1.jpg" alt="blog">
+                            <img src="@item.PhotoUrl" alt="blog">
                         </a>
                     </div>
                     <div class="blog-card-content">
                         <ul class="blog-entry">
-                            <li><i class="flaticon-calendar-1"></i>20 Oct 2020</li>
+                            <li><i class="flaticon-calendar-1"></i>@item.BlogDate</li>
                             <li><i class="flaticon-man-user"></i>By Admin</li>
                         </ul>
-                        <h3><a href="blog-details.html">Why Burger Made So Tasty In Recent Days</a></h3>
-                        <p>This Mexican Style Burger is pumped out with flavor from chilli powder</p>
+                        <h3><a href="blog-details.html">@item.BlogName</a></h3>
+                        <p>@item.BlogSummary</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                <div class="blog-card blog-card-two">
-                    <div class="blog-card-thumb">
-                        <a href="blog-details.html">
-                            <img src="assets/images/blog-2.jpg" alt="blog">
-                        </a>
-                    </div>
-                    <div class="blog-card-content">
-                        <ul class="blog-entry">
-                            <li><i class="flaticon-calendar-1"></i>15 Oct 2020</li>
-                            <li><i class="flaticon-man-user"></i>By Admin</li>
-                        </ul>
-                        <h3><a href="blog-details.html">What Is More Convenient? Dine In Or Take Away?</a></h3>
-                        <p>This Mexican Style Burger is pumped out with flavor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="blog-card blog-card-two">
-                    <div class="blog-card-thumb">
-                        <a href="blog-details.html">
-                            <img src="assets/images/blog-1.jpg" alt="blog">
-                        </a>
-                    </div>
-                    <div class="blog-card-content">
-                        <ul class="blog-entry">
-                            <li><i class="flaticon-calendar-1"></i>12 Oct 2020</li>
-                            <li><i class="flaticon-man-user"></i>By Admin</li>
-                        </ul>
-                        <h3><a href="blog-details.html">What Is The Most Hived Pizza Among The Teenagers?</a></h3>
-                        <p>This Mexican Style Burger is pumped out with flavor</p>
-                    </div>
-                </div>
-            </div>
+            </div>  
+            }    
+         
+          
         </div>
         <div class="text-center">
             <a href="blogs-grid-without-sidebar.html" class="btn">Explore Blog <i class="flaticon-right-arrow-2"></i></a>

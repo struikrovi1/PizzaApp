@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TechBlog - page | @ViewData["Title"]</title>
+  <title>Fafo - page | @ViewData["Title"]</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="~/frontadmin/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="~/frontadmin/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ 
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -197,10 +199,21 @@
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
+
             </a>
+
+             <a href="/" >
+           
+              <p>
+               Main Site
+             
+              </p>
+
+            </a>
+            <ul cl
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a asp-controller = "Category" asp-action = "index" class="nav-link">
+                <a class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
@@ -221,18 +234,21 @@
           </li>
     
           <li class="nav-header">LABELS</li>
+          
           <li class="nav-item">
-            <a href="/category" class="nav-link">
+            <a asp-controller = "product" asp-action = "index" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Category</p>
+              <p class="text">Product</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a asp-controller = "blog" asp-action = "index" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Blog</p>
+
+            <li class="nav-item">
+            <a asp-controller = "booking" asp-action = "index" class="nav-link">
+         <i style = "color: white; margin-right: 5px;" class="fa-solid fa-envelope"></i>
+              <p class="text">Booking</p>
             </a>
           </li>
+      
       
         </ul>
       </nav>

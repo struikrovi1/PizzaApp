@@ -11,5 +11,15 @@ namespace Entitites
         public  string CategoryName { get; set; }
 
         public string? CategoryIcon { get; set; }
+
+        public ICollection<Product> Products { get; set; }
+
+        public Category()
+        {
+            Products = new List<Product>();
+        }
+
+        
+
     }
 }
